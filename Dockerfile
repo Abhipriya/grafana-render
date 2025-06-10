@@ -1,6 +1,7 @@
 FROM grafana/grafana:10.0.0
 
-# Copy custom grafana.ini into the container
-COPY conf/grafana.ini /etc/grafana/grafana.ini
+# Copy your entire config folder (not just one file)
+COPY conf /etc/grafana/
 
 EXPOSE 3000
+
