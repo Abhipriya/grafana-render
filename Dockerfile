@@ -1,8 +1,6 @@
-# Use official Grafana base image
 FROM grafana/grafana:10.0.0
 
-# Copy your custom Grafana config (with anonymous access enabled)
-COPY conf/ /etc/grafana/
+# Copy custom grafana.ini into the container
+COPY conf/grafana.ini /etc/grafana/grafana.ini
 
-# Expose Grafana default port
 EXPOSE 3000
